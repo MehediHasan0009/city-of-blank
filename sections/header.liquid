@@ -32,7 +32,7 @@
       <div class="header-bottominner">
         <!-- Header Logo -->
         <div class="header-logo">
-          <a href="index.html">
+          <a href="/">
             {{ 'logo.png' | asset_url | img_tag: 'dialia-logo' }}
           </a>
         </div>
@@ -58,11 +58,25 @@
             {% endfor %}
           </ul>
         </nav>
-        
+        <!-- Header Icons -->
         <div class="header-icons">
           <ul>
-            <li><a href="cart.html"><i class="zmdi zmdi-shopping-cart"></i></a></li>
-            <li><a class="header-searchtrigger" href="#"><i class="zmdi zmdi-search"></i></a></li>
+            <li><a href="/cart">
+              {% render 'icon-shopping-bag' %}
+            </a></li>
+            <li><a class="header-searchtrigger" href="#">
+              {% render 'icon-search' %}  
+            </a></li>
+
+            {% if shop.customer_accounts_enabled %}
+              {% if customer %}
+                <a href="/account">
+                  {{ 'Log Out' | customer_logout_link }}
+              {% else %}
+                  Login 
+                </a>
+              {% endif %}
+            {% endif %}
           </ul>
         </div>
         <div class="header-searchbox">

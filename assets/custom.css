@@ -1,22 +1,40 @@
-/*
- * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- *
- * Template Name: Dialia - Registered Massage Therapy HTML Template   
- * Template URI: https://thememarch.com/demo/html/dialia/
- * Description: Dialia is a registered massage therapy HTML template which comes with the unique and clean design. It helps you to create a beautiful massage therapy HTML website. It's a fully responsive website template. It has also e-commerce support. E-commerce pages are included on this template.
- * Author: Thememarch
- * Author URI: https://thememarch.com
- * Version: 2.0
- *
- * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- */
+/* .header {
+  height: 200px;
+} */
 
-.header-icons ul {
-  display: flex;
+/* Header Navigation */
+.tm-navigation .tm-navigation-dropdown ul.submenu {
+  top: 60px;
+  visibility: visible;
+  transform: scaleY(1);
+  opacity: 1;
+  z-index: 99;
 }
 
-.header-icons ul>li>a {
+/* Header Icons */
+.header-icons ul > li.cart > a,
+.header-icons ul > li.search > a,
+.header-icons ul > li.account {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+}
+
+.header-icons #customer_login_link,
+.header-icons #customer_register_link {
+  border: none;
+  white-space: nowrap;
+}
+
+.header-icons ul > li.account a {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.header-icons #customer_login_link:hover,
+.header-icons #customer_register_link:hover {
+  background: none;
+  color: #0075b7;
 }
